@@ -1,0 +1,51 @@
+<div class="container">
+    <h2 class="text-center">Bereken Pensioenwaarde</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <h4>Algemene gegevens</h4>
+        </div>
+        <div class="form-group">
+            <label for="voornaam"> Voornaam</label>
+            <input type="text" class="form-control" id="voornaam" [(ngModel)]="user.voornaam" name="voornaam">
+        </div>
+        <div class="form-group">
+            <label for="achternaam"> Achternaam</label>
+            <input type="text" class="form-control" id="achternaam" [(ngModel)]="user.achternaam" name="achternaam">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" class="form-control" id="email" [(ngModel)]="user.email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="leeftijd">Leeftijd</label>
+            <input type="number" class="form-control" id="leeftijd" [(ngModel)]="user.leeftijd" name="leeftijd">
+        </div>
+        <br>
+        <div>
+            <h4>Financiele gegevens</h4>
+        </div>
+        <div class="form-group">
+            <label for="salaris">Fulltime Salaris</label>
+            <input type="number" class="form-control" id="salaris" [(ngModel)]="user.fulltimeSalaris" name="salaris">
+        </div>
+        <div class="form-group">
+            <label for="parttime">Parttime Percentage</label>
+            <input type="number" class="form-control" id="parttime" [(ngModel)]="user.parttimePercentage" name="parttime">
+        </div>
+        <div class="form-group">
+            <label for="pensioenLeeftijd">Verwachte Pensioenleeftijd</label>
+            <input type="number" class="form-control" id="pensioenLeeftijd" [(ngModel)]="user.verwachtePensioenLeeftijd" name="pensioenLeeftijd">
+        </div>
+        <br>
+
+        <button class="btn btn-success mt-2" type="submit">Berekenen</button>
+    </form>
+    <br>
+    <br>
+    <div>
+        <h3>Berekende pensioenwaarde:</h3>
+        <h4>€ {{ berekendeWaarde }}</h4>
+    </div>
+    <br>
+    <br>
+</div>
